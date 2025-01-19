@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Code Exam</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ career }} Exam</h1>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        {% for scenario in scenarios %}
+            <h2>Scenario</h2>
+            <p>{{ scenario.description }}</p>
+            <form method="POST" action="/submit">
+                <textarea name="user_code" rows="10" cols="50" placeholder="Write your code here..."></textarea><br>
+                <input type="hidden" name="scenario_index" value="{{ loop.index0 }}">
+                <input type="hidden" name="career" value="{{ career }}">
+                <button type="submit">Submit Code</button>
+            </form>
+            <hr>
+        {% endfor %}
+    </div>
+</body>
+</html>

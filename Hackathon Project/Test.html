@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber System Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .code-area {
+            margin: 20px 0;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        .output-area {
+            margin-top: 20px;
+        }
+
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            display: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .failed {
+            background-color: red;
+        }
+
+        .success {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <br>
+    <div class="container" >
+        <h1>Secure Systems & Networks Test</h1>
+        <div class="code-area">
+            <label for="codeInput"><h1 style="font-size: 17px;">Scenario:</h1>
+                <p>You are tasked with designing a secure network for a small business. The network must include firewalls to block
+                unauthorized traffic, and an Intrusion Detection System (IDS) to monitor and detect potential threats. Employees
+                should be able to securely access company resources remotely through a VPN.
+            </p>
+            </label>
+            <label for="codeInput"><h1 style="font-size: 17px;">Question:</h1>
+                <p>How would you configure the firewall and IDS to ensure that only authorized traffic is allowed, while
+                    effectively monitoring for suspicious activity? Provide examples of rules you would implement for both the
+                    firewall and IDS
+            </p>
+            </label>
+
+            <textarea id="codeInput" placeholder="Write your code here..."></textarea>
+            <button onclick="runCode()" style="">Run</button>
+        </div>
+
+        
+        <div class="output-area">
+            <label for="output">Output:</label>
+            <textarea id="output" readonly></textarea>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        function runCode() {
+            const codeInput = document.getElementById('codeInput').value;
+            const output = document.getElementById('output');
+            const message = document.getElementById('message');
+
+            // Clear previous output and message
+            output.value = '';
+            message.style.display = 'none';
+
+            // Function to check if the user code contains a valid function
+            try {
+                const func = new Function(codeInput + '; return square(5);'); // Example test with number 5
+                const result = func();
+                output.value = `Output: ${result}`;
+
+                // Assuming the correct output for square(5) should be 25
+                if (result === 25) {
+                    message.style.display = 'none'; // Hide message if successful
+                } else {
+                    message.textContent = 'You have failed the task. Re-do it again.';
+                    message.className = 'message failed';
+                    message.style.display = 'block';
+                }
+            } catch (error) {
+                message.textContent = 'You have failed the task. Re-do it again.';
+                message.className = 'message failed';
+                message.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

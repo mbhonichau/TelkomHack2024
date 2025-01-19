@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Task Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .task-container {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .guidelines {
+            background-color: #e2e2e2;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Developer Task Guide</h1>
+</header>
+
+<div class="task-container">
+    <h2>Real-World Scenario</h2>
+    <p><strong>Task:</strong> Debugging a Real-Time Payment Gateway Issue</p>
+    <p><strong>Scenario:</strong> You are working for an e-commerce company, and customers have started reporting that their payments are failing intermittently. You suspect that the issue lies in how your backend service handles payment authorization requests.</p>
+    <h3>Objective:</h3>
+    <p>Your job is to investigate the root cause, fix the issue, and deploy the solution in a live environment without disrupting active users.</p>
+</div>
+
+<div class="guidelines">
+    <h2>Guidelines</h2>
+    <ol>
+        <li><strong>Understand the Payment Flow:</strong> Review the payment process, from submitting card details to receiving the confirmation of the transaction.</li>
+        <li><strong>Identify Patterns in Failures:</strong> Analyze logs from the failed payment attempts and determine if the issue occurs at a specific step, such as authorization or verification.</li>
+        <li><strong>Check API Request and Response:</strong> Verify if the API requests sent to the payment processor are correctly formatted, and inspect the API responses for error codes or timeouts.</li>
+        <li><strong>Simulate Test Cases:</strong> Recreate the issue in a development environment using test payment cards to ensure that the issue is consistent.</li>
+        <li><strong>Implement Fix:</strong> If the problem is identified, apply the necessary code changes. This could involve error handling improvements, timeout adjustments, or API modifications.</li>
+        <li><strong>Deploy Safely:</strong> When deploying the fix, ensure that it’s done during a low-traffic period, and always have a rollback plan in case the issue persists.</li>
+        <li><strong>Monitor Post-Deployment:</strong> After the fix is deployed, monitor the system for any anomalies or recurring issues, and gather feedback from users to confirm the problem is resolved.</li>
+    </ol>
+    <button onclick="window.location.href='Test.html';">Start Task</button>
+</div>
+
+<footer>
+    <p>Developed by [SkillMeter360] | Software Developer Guide</p>
+</footer>
+
+<script>
+    function startDesign(url) {
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>

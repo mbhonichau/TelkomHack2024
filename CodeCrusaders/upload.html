@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SkillMeter 360 - upload</title>
+      <link rel="stylesheet" href="css/components.css">
+      <link rel="stylesheet" href="css/icons.css">
+      <link rel="stylesheet" href="css/responsee.css">
+      <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+      <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <!-- CUSTOM STYLE -->      
+      <link rel="stylesheet" href="css/template-style.css">
+      <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">  
+      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+   </head>
+
+
+   <body class="size-1520 primary-color-red background-dark">
+      <!-- HEADER -->
+      <header class="grid">
+        <!-- Top Navigation -->
+        <nav class="s-12 grid background-none background-primary-hightlight">
+         <a href="HMR_interface.html" class="m-12 l-3 padding-2x logo">
+            <img src="img/logo_360.png" alt="SkillMeter 360 Logo" style="max-width: 150px; height: 150px;">
+         </a>
+         <div class="top-nav s-12 l-9" style=" align-items: center; padding-top: 50px;"> 
+            <ul class="top-ul right chevron">
+              <li><a href="HMR_interface.html">Home</a></li>
+              <li><a href="upload.html">Upload tasks</a></li>
+              <li><a href="trackProgress.html">Track tasks</a></li>
+              <li><a href="index.html">LogOut</a></li>
+            </ul>
+         </div>
+      </nav>
+      </header>
+      
+      <!-- MAIN -->
+      <main role="main">
+
+      <div class="s-12 padding-2x">
+         <form action="submit_tasks.html" method="post" class="form" style="background-color: #2c3e50; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <h2 class="text-strong text-white text-center" style="margin-bottom: 20px;">Task Submission Form</h2>
+            <div class="form-group" style="margin-bottom: 15px;">
+               <label for="taskName" class="text-white" style="font-weight: bold;">Task Name:</label>
+               <input type="text" id="taskName" name="taskName" required class="form-control" placeholder="Enter task name" style="width: 100%; padding: 10px; border: none; border-radius: 4px;"/>
+            </div>
+            <div class="form-group" style="margin-bottom: 15px;">
+               <label for="taskDescription" class="text-white" style="font-weight: bold;">Task Description:</label>
+               <textarea id="taskDescription" name="taskDescription" required class="form-control" placeholder="Enter task description" style="width: 100%; height: 150px; padding: 10px; border: none; border-radius: 4px;"></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom: 15px;">
+               <label for="task" class="text-white" style="font-weight: bold;">Task:</label>
+               <textarea id="taskDescription" name="taskDescription" required class="form-control" placeholder="Enter task" style="width: 100%; height: 150px; padding: 10px; border: none; border-radius: 4px;"></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom: 15px;">
+               <label for="taskAnswer" class="text-white" style="font-weight: bold;">Task Answer:</label>
+               <textarea id="taskAnswer" name="taskAnswer" required class="form-control" placeholder="Enter your answer to the task" style="width: 100%; height: 150px; padding: 10px; border: none; border-radius: 4px;"></textarea>
+            </div>
+            <div class="form-group">
+               <button type="submit" class="button" style="background-color: #e74c3c; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Submit Task</button>
+            </div>
+         </form>
+      </div>
+      </main>                                                                  
+      <script type="text/javascript" src="js/responsee.js"></script>
+      <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+      <script type="text/javascript" src="js/template-scripts.js"></script>
+
+   </body>
+</html>

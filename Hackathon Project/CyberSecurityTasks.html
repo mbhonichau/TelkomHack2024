@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-Tasks</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <link rel="stylesheet" href="Design.css">
+</head>
+
+<body>
+
+
+    <section id="page-header" class="blog-header">
+
+    </section>
+
+    <section id="blog">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/Security-Architecture.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Security Architecture Design</h4>
+                <p>Designing secure systems and networks with layers of security controls (firewalls, intrusion
+                    detection systems, encryption, etc.)</p>
+                <a href="Guideline.html" class="task-link">START TASK</a>
+            </div>
+            <h1>1/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/Implementing Security Controls.png" alt="">
+            </div>
+            <div class="blog-details">
+                <h4> Implementing Security Controls</h4>
+                <p>Managing access controls, including multi-factor authentication and role-based access systems.</p>
+                <a href="Challenge.html" class="task-link">START TASK
+                    <i class="fas fa-lock lock-icon"></i>
+                    <span class="tooltip">Pay premium to unlock these tasks</span>
+                </a>
+            </div>
+            <h1>1/02</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/Security Awareness Training.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Security Awareness Training</h4>
+                <p>Developing and delivering training to employees on how to recognize and prevent cyber threats, such
+                    as phishing or social engineering.
+                </p>
+                <a href="Guideline.html" class="task-link">START TASK
+                    <i class="fas fa-lock lock-icon"></i>
+                    <span class="tooltip">Pay premium to unlock these tasks</span>
+                </a>
+            </div>
+            <h1>1/03</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/SECURE SOFTWARE DEVELOPMENT.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Security Software Development</h4>
+                <p>Building tools like intrusion detection systems (IDS), data loss prevention (DLP) solutions, or
+                    encryption tools to improve an organization’s security.</p>
+                <a href="Challenge.html" class="task-link">START TASK
+                    <i class="fas fa-lock lock-icon"></i>
+                    <span class="tooltip">Pay premium to unlock these tasks</span>
+                </a>
+            </div>
+            <h1>1/04</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/audit.png" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Security Assessments and Audits</h4>
+                <p>Performing risk assessments to identify potential threats to an organization's information assets</p>
+                <a href="#" id="deactivatedLink">START TASK
+                    <i class="fas fa-lock lock-icon"></i>
+                    <span class="tooltip">Pay premium to unlock these tasks</span>
+                </a>
+            </div>
+            <h1>1/05</h1>
+        </div>
+    </section>
+    <a href="#" id="deactivatedLink"> </a>
+    <script>
+        function deactivateLink(link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default action
+            });
+            link.classList.add('deactivated'); // Add a class for styling
+        }
+
+        // Get all task links
+        const taskLinks = document.querySelectorAll('.task-link');
+
+        // Deactivate the second link and activate the first
+        deactivateLink(taskLinks[1]); // Deactivate the second link
+
+        // Deactivate the rest (third to fifth)
+        for (let i = 2; i < taskLinks.length; i++) {
+            deactivateLink(taskLinks[i]);
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

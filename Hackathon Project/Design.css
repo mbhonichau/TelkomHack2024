@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'monsterrat', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#product1 .proo {
+  width: 30%;
+  min-width: 250px;
+  height: 300px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .proo:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .proo img {
+  width: 100%;
+  height: 85%;
+  border-radius: 20px;
+}
+
+#product1 .proo .dess {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#product1 .proo .dess span {
+  color: #606063;
+  font-size: 16px;
+}
+
+
+#page-header.blog-header {
+  background-image: url("img/IT\ HEADER.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#blog {
+  padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+#blog .blog-img {
+  width: 50%;
+  margin-right: 40px;
+  background-size: cover;
+  background-position: center;
+}
+
+#blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details {
+  width: 50%;
+}
+
+#blog .blog-details a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+
+#blog .blog-details a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+}
+
+#blog .blog-details a:hover {
+  color: #088178;
+}
+
+#blog .blog-details a:hover::after {
+  background-color: #088178;
+}
+
+#blog .blog-box h1 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbce;
+  z-index: -9;
+}
+
+/* General body styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Flex container to align two panels */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows the panels to wrap on smaller screens */
+  width: 100%;
+  height: 100vh; /* Occupy full viewport height */
+}
+
+/* Panel styling */
+.panel {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Code panel specific styles */
+.code-panel {
+  background-color: #f9f9f9;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+/* Output panel specific styles */
+.output-panel {
+  background-color: #fff;
+}
+
+#output {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  overflow: auto;
+  white-space: pre-wrap; /* Ensure output text wraps properly */
+  border-radius: 4px;
+}
+
+/* Button styling */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.deactivated {
+  color: gray; 
+  pointer-events: none; 
+  text-decoration: line-through;
+}
+
+.deactivated .lock-icon {
+  margin-left: 5px; /* Spacing between text and icon */
+}
+
+.tooltip {
+  display: none; /* Hide tooltip by default */
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Position above the link */
+  left: 0;
+  z-index: 10; /* Ensure tooltip is above other elements */
+}
+
+
+.deactivated:hover .tooltip,
+.lock-icon:hover + .tooltip {
+            display: block; /* Show tooltip on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .panel {
+      width: 100%;
+  }
+}

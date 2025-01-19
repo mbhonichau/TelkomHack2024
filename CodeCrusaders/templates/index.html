@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Code Assessment Tool</title>
+</head>
+<STYle>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+</STYle>
+<body>
+    <div class="container">
+        <h1>Choose Your Career</h1>
+        <form action="/exam" method="POST">
+            <label for="career">Select Career:</label>
+            <select name="career" id="career" required>
+                {% for career in careers %}
+                    <option value="{{ career }}">{{ career }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <br>
+            <label for="level">Select Level:</label>
+            <select name="level" id="level" required>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit" class="btn">Start Exam</button>
+           
+
+        </form>
+    </div>
+</body>
+<script>
+    function back(){
+        window.location.href('user_interfaceindex.html')
+    }
+</script>
+</html>

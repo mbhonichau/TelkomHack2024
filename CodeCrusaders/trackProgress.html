@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SkillMeter 360 - upload</title>
+      <link rel="stylesheet" href="css/components.css">
+      <link rel="stylesheet" href="css/icons.css">
+      <link rel="stylesheet" href="css/responsee.css">
+      <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+      <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <!-- CUSTOM STYLE -->      
+      <link rel="stylesheet" href="css/template-style.css">
+      <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">  
+      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #e2f7f2;
+            border-radius: 8px;
+        }
+
+        .overview p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .charts {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            max-width: 45%;
+            height: 300px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .performance, .attendance, .passed-subjects {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .charts {
+                flex-direction: column;
+            }
+
+            canvas {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+   </head>
+
+
+   <body class="size-1520 primary-color-red background-dark">
+
+      <!-- HEADER -->
+      <header class="grid">
+        <nav class="s-12 grid background-none background-primary-hightlight">
+            <a href="HMR_interface.html" class="m-12 l-3 padding-2x logo">
+               <img src="img/logo_360.png" alt="SkillMeter 360 Logo" style="max-width: 150px; height: 150px;">
+            </a>
+            <div class="top-nav s-12 l-9" style=" align-items: center; padding-top: 50px;"> 
+               <ul class="top-ul right chevron">
+                 <li><a href="HMR_interface.html">Home</a></li>
+                 <li><a href="upload.html">Upload tasts</a></li>
+                 <li><a href="trackProgress.html">Track tasts</a></li>
+                 <li><a href="index.html">LogOut</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <main role="main">
+        <header>
+            <h1>HMR Analytics</h1>
+        </header>
+
+    <div class="container">
+        <div class="overview">
+            <h2>Overview</h2>
+            <p>Total Challenges: <span id="totalChallenges">5</span></p>
+            <p>Total Participants: <span id="totalParticipants">120</span></p>
+            <p>Overall Success Rate: <span id="successRate">85%</span></p>
+        </div>
+
+        <div class="charts">
+            <canvas id="skillPerformanceChart"></canvas>
+            <canvas id="trendChart"></canvas>
+        </div>
+
+        <div class="challenges">
+            <h2>Challenges Performance</h2>
+            <table id="challengesTable">
+                <thead>
+                    <tr>
+                        <th>Challenge Title</th>
+                        <th>Correct Responses</th>
+                        <th>Incorrect Responses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Challenge 1</td>
+                        <td>75</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Challenge 2</td>
+                        <td>90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Challenge 3</td>
+                        <td>60</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Challenge 4</td>
+                        <td>85</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Challenge 5</td>
+                        <td>100</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="challenges">
+            <h2>Passed Students</h2>
+            <table id="passedStudentsTable">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>1003</td>
+                        <td>Samuel Adams</td>
+                        <td>samueladams@example.com</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>1004</td>
+                        <td>Emily Johnson</td>
+                        <td>emilyjohnson@example.com</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>1005</td>
+                        <td>Michael Brown</td>
+                        <td>michaelbrown@example.com</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <div class="download-button" style="text-align: center; margin-top: 20px;">
+        <button onclick="downloadReport()" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Download
+        </button>
+    </div>
+    <script>
+        function downloadReport() {
+            alert('Downloaded Successfuly');
+        }
+    </script>
+    </div>
+
+    <script>
+        // Skill Performance Chart
+        const ctx1 = document.getElementById('skillPerformanceChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Python', 'Java', 'Networking', 'Data Analytics'],
+                datasets: [{
+                    label: 'Correct Responses',
+                    data: [80, 90, 70, 85],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                }]
+            }
+        });
+
+        // Trend Chart
+        const ctx2 = document.getElementById('trendChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+                datasets: [{
+                    label: 'Total Attempts',
+                    data: [100, 150, 130, 170],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+      </main>
+   </body>
+</html>                                                              
+      <script type="text/javascript" src="js/responsee.js"></script>
+      <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+      <script type="text/javascript" src="js/template-scripts.js"></script>
+      <script>
