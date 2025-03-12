@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>skillmeter360 - User Page</title>
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/responsee.css">
+  <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+  <!-- CUSTOM STYLE -->
+  <link rel="stylesheet" href="css/template-style.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <style>
+    .section-p1 {
+      padding: 40px 80px;
+    }
+
+    #product1 {
+      text-align: center;
+    }
+
+    #product1 .pro-container {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    #product1 .proo {
+      width: 13%;
+      min-width: 250px;
+      height: 300px;
+      padding: 10px 12px;
+      border: 1px solid #cce7d0;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+      margin: 15px 0;
+      transition: 0.2s ease;
+      position: relative;
+    }
+
+    #product1 .proo:hover {
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    #product1 .proo img {
+      width: 100%;
+      height: 85%;
+      border-radius: 20px;
+    }
+
+    #product1 .proo .dess {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    #product1 .proo .dess span {
+      color: #606063;
+      font-size: 16px;
+    }
+
+
+    #page-header.blog-header {
+      background-image: url("img/IT\ HEADER.jpg");
+      width: 100%;
+      height: 40vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 14px;
+    }
+
+    #blog {
+      padding: 150px 150px 0 150px;
+    }
+
+    #blog .blog-box {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      padding-bottom: 90px;
+    }
+
+    #blog .blog-img {
+      width: 50%;
+      margin-right: 40px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #blog img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    #blog .blog-details {
+      width: 50%;
+    }
+
+    #blog .blog-details a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 700;
+      position: relative;
+      transition: 0.3s;
+      padding-top: 30;
+    }
+
+    #blog .blog-details a::after {
+      content: "";
+      width: 50px;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      top: 4px;
+      right: -60px;
+    }
+
+    #blog .blog-details a:hover {
+      color: #088178;
+    }
+
+    #blog .blog-details a:hover::after {
+      background-color: #088178;
+    }
+
+    #blog .blog-box h1 {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      font-size: 70px;
+      font-weight: 700;
+      color: #c9cbce;
+      z-index: -9;
+    }
+
+    .blog-img i {
+      font-size: 100px;
+      margin-left: 200px;
+      margin-top: 60px;
+    }
+
+    .blog-box span {
+      margin-left: 150px;
+
+    }
+
+    /* Reset some default styles */
+    body,
+    html,
+    textarea {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .header {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .main {
+      display: flex;
+      width: 80%;
+      max-width: 1200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    .editor {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .left-panel,
+    .right-panel {
+      width: 48%;
+    }
+
+    textarea {
+      width: 100%;
+      height: 300px;
+      padding: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    .control-buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #output {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      overflow: auto;
+    }
+
+    /* Dark mode styling */
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    .dark-mode textarea,
+    .dark-mode #output {
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+
+
+<body class="size-1520 primary-color-red background-dark">
+  <!-- HEADER -->
+  <header class="grid">
+    <!-- Top Navigation -->
+    <nav class="s-12 grid background-none background-primary-hightlight">
+      <a href="user_interface.htmll" class="m-12 l-3 padding-2x logo">
+        <img src="/img/LOGO.png" alt="SkillMeter 360 Logo" style="max-width: 150px; height: 150px;">
+      </a>
+      <div class="top-nav s-12 l-9" style=" align-items: center; padding-top: 50px;">
+        <ul class="top-ul right chevron">
+          <li><a href="user_interface.html">Home</a></li>
+          <li><a href="track.html">Track Progress</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="index.html">LogOut</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main role="main">
+    <!-- TOP SECTION -->
+    <header class="grid">
+      <div class="s-12 padding-2x">
+        <h1 class="text-strong text-white text-center center text-size-60 text-uppercase margin-bottom-20">Courses</h1>
+        <p class="text-size-20 text-white text-center center text-uppercase">SkillMeter 360, has partnered with
+          recognised service and training providers to offer you these courses.</p>
+      </div>
+    </header>
+
+    <section id="blog">
+      <div class="blog-box">
+        <div class="blog-img">
+          <i class="fas fa-clock lock-icon"></i>
+        </div>
+        <div class="blog-details">
+          <h4>Security Architecture Design</h4>
+          <p>Designing secure systems and networks with layers of security controls (firewalls, intrusion
+            detection systems, encryption, etc.)</p>
+          <a href="http://127.0.0.1:5000/">START TASK</a>
+        </div>
+        <h1>1/01</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img" style="display: block;">
+          <i class="fas fa-lock lock-icon" style="color: orange;"></i>
+          <br>
+          <br>
+          <span class="tooltip">Unlock premium for this task</span>
+
+        </div>
+        <div class="blog-details">
+          <h4> Implementing Security Controls</h4>
+          <p>Managing access controls, including multi-factor authentication and role-based access systems.</p>
+          <a href="#" id="deactivated">START TASK</a>
+        </div>
+        <h1>1/02</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+          <i class="fas fa-lock lock-icon" style="color: orange;"></i>
+          <br>
+          <br>
+          <span class="tooltip">Unlock premium for this task</span>
+        </div>
+        <div class="blog-details">
+          <h4>Security Awareness Training</h4>
+          <p>Developing and delivering training to employees on how to recognize and prevent cyber threats, such
+            as phishing or social engineering.
+          </p>
+          <a href="#" id="deactivated">START TASK</a>
+        </div>
+        <h1>1/03</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+          <i class="fas fa-lock lock-icon" style="color: orange;"></i>
+          <br>
+          <br>
+          <span class="tooltip">Unlock premium for this task</span>
+        </div>
+        <div class="blog-details">
+          <h4>Security Software Development</h4>
+          <p>Building tools like intrusion detection systems (IDS), data loss prevention (DLP) solutions, or
+            encryption tools to improve an organization’s security.</p>
+          <a href="#" id="deactivated">START TASK
+          </a>
+        </div>
+        <h1>1/04</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+          <i class="fas fa-lock lock-icon" style="color: orange;"></i>
+          <br>
+          <br>
+          <span class="tooltip">Unlock premium for this task</span>
+        </div>
+        <div class="blog-details">
+          <h4>Security Assessments and Audits</h4>
+          <p>Performing risk assessments to identify potential threats to an organization's information assets</p>
+          <a href="#" id="deactivated">START TASK
+          </a>
+        </div>
+        <h1>1/05</h1>
+      </div>
+    </section>
+
+  </main>
+  <script type="text/javascript" src="js/responsee.js"></script>
+  <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+  <script type="text/javascript" src="js/template-scripts.js"></script>
+  <script>
+    function deactivatedLink(link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+      link.classList.add('deactivated');
+      
+      const taskLinks = document.querySelectorAll('.task-link');
+
+      deactivatedLink(taskLink[1]);
+
+      for (let i = 2; i < taskLinks.length; i++) {
+        deactivatedLink(taskLinks[i]);
+      }
+    }
+  </script>
+
+</body>
+
+</html>

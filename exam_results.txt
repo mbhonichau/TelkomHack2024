@@ -1,0 +1,18 @@
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 0, Recommendations: Introduction to Python, Error Handling in Python, Pandas for Data Analysis
+Score: 50, Recommendations: Intermediate Python, Data Analysis with Pandas
+Score: 50, Recommendations: Intermediate Python, Data Analysis with Pandas
+Score: 50, Recommendations: Intermediate Python, Data Analysis with Pandas
+Score: 50, Recommendations: Intermediate Python, Data Analysis with Pandas
